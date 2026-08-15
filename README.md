@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# residensea
 
-## Getting Started
+Static Next.js site for residensea, an annual artist residency by the sea hosted
+by Violet Moon and Madelline Vicencio.
 
-First, run the development server:
+## Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+`next.config.ts` sets `output: "export"`, so this produces a static site in
+`./out` — no server required.
 
-To learn more about Next.js, take a look at the following resources:
+## Deploy — GitHub Pages
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+`.github/workflows/deploy.yml` builds and publishes `./out` to GitHub Pages on
+every push to `main`. One-time setup in the repo:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Settings → Pages → Build and deployment → Source: **GitHub Actions**.
+2. Push to `main` — the workflow builds and deploys automatically.
 
-## Deploy on Vercel
+The site is served at `https://<owner>.github.io/<repo>/` until a custom
+domain is attached.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Pointing a custom domain at it later
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Add a `public/CNAME` file containing just the domain, e.g. `residensea.com`.
+2. At your DNS provider, add either:
+   - an `A` record for the apex domain pointing at GitHub Pages' IPs
+     (`185.199.108.153`, `.109.153`, `.110.153`, `.111.153`), or
+   - a `CNAME` record for a subdomain (e.g. `www`) pointing at
+     `<owner>.github.io`.
+3. In Settings → Pages, set the custom domain and enable **Enforce HTTPS**
+   once DNS has propagated.
+
+No code changes needed beyond the `CNAME` file — the site has no `basePath`
+configured, so it works the same at the GitHub Pages URL and a custom domain.
