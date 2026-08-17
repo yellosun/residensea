@@ -17,7 +17,7 @@ const body = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Residensea — an artist residency by the sea",
+  title: "Residensea, an artist residency by the sea",
   description:
     "Residensea is an annual artist residency hosted by Violet Moon and Madelline Vicencio. Each year we travel to a new coastal community to learn its history, support local business, and make art from what the place gives us.",
 };
