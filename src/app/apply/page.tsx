@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { BASE_PATH } from "@/lib/base-path";
 
 const CONTACT_EMAIL = "artist.residensea@gmail.com";
 const MAILTO =
@@ -20,7 +21,7 @@ export default function ApplyPage() {
     <div className="px-6 py-24">
       <div className="mx-auto grid max-w-4xl gap-10 sm:grid-cols-[280px_minmax(0,1fr)] sm:items-start">
         <Image
-          src="/galveston.jpg"
+          src={`${BASE_PATH}/galveston.jpg`}
           alt="Violet and Madelline in Galveston, Texas"
           width={280}
           height={350}

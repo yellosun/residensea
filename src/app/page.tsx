@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import LogoMark from "@/components/LogoMark";
+import { BASE_PATH } from "@/lib/base-path";
 import {
   GiveBackIcon,
   HistoryIcon,
@@ -36,13 +37,13 @@ const JOINT_STATEMENT =
 
 const HOSTS = [
   {
-    photo: "/hosts/violet.jpg",
+    photo: `${BASE_PATH}/hosts/violet.jpg`,
     name: "Violet Moon, MA NCC",
     pronouns: "they/them",
     bio: "A queer, genderless movement artist and choreographer whose work weaves together dance, social activism, arts advocacy, and trauma-informed healing. Violet holds a Master's in Clinical Mental Health Counseling and has trained at Hubbard Street, P.A.R.T.S. in Brussels, and Le Centre National de la Danse in Paris. Their choreography explores intimacy, collective memory, and reclamation, most recently staged in GROOM (2025).",
   },
   {
-    photo: "/hosts/madelline.jpg",
+    photo: `${BASE_PATH}/hosts/madelline.jpg`,
     name: "Madelline Vicencio",
     pronouns: "she/they",
     bio: "A Houston born now West Virginia-based painter with a BFA in Painting from the University of Houston. Her work has shown at BOX 13 Artspace, DiverseWorks, Anya Tish Gallery, and MECA Houston, and she has held residencies at Kinhouse, TEXERE in Oaxaca, and Casa Lü in Mexico City. Madelline serves as Treasurer of BOX 13 ArtSpace and coordinates community rooted exhibitions and residencies across the city.",
@@ -54,25 +55,25 @@ const WORK_SAMPLES = [
     title: "The House",
     subtitle: "Immersive exhibition, joint",
     year: "2026",
-    photo: "/work/the-house.jpg",
+    photo: `${BASE_PATH}/work/the-house.jpg`,
   },
   {
     title: "Touched",
     subtitle: "Fabrication & dance theatre, joint",
     year: "2026",
-    photo: "/work/touched.jpg",
+    photo: `${BASE_PATH}/work/touched.jpg`,
   },
   {
     title: "Do You Have Papers?",
     subtitle: "Sculpture, Madelline",
     year: "2026",
-    photo: "/work/papers.jpg",
+    photo: `${BASE_PATH}/work/papers.jpg`,
   },
   {
     title: "Artists for People",
     subtitle: "Benefit concert production, Violet",
     year: "2025",
-    photo: "/work/artists-for-people.jpg",
+    photo: `${BASE_PATH}/work/artists-for-people.jpg`,
   },
 ];
 
@@ -118,7 +119,7 @@ export default function Home() {
               Wherever we go, we go by the sea.
             </h2>
             <Image
-              src="/moments/laughing.jpg"
+              src={`${BASE_PATH}/moments/laughing.jpg`}
               alt="Violet and Madelline laughing together at The House"
               width={1200}
               height={800}
@@ -185,7 +186,7 @@ export default function Home() {
               </p>
             </div>
             <Image
-              src="/moments/hug.jpg"
+              src={`${BASE_PATH}/moments/hug.jpg`}
               alt="Violet and Madelline hugging after a live performance during The House, an immersive exhibit"
               width={280}
               height={324}
