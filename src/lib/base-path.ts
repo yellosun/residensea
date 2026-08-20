@@ -1,1 +1,1 @@
-export const BASE_PATH = "/residensea";
+export const BASE_PATH = "";
