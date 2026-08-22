@@ -13,7 +13,7 @@ const MAILTO =
 export const metadata: Metadata = {
   title: "Apply | Residensea",
   description:
-    "Applications for the May 8–16, 2027 Galveston, Texas artist residency are opening soon.",
+    "Applications for the May 8–17, 2027 Galveston, Texas artist residency are opening soon.",
 };
 
 export default function ApplyPage() {
@@ -35,7 +35,7 @@ export default function ApplyPage() {
           <h1 className="mt-6 font-serif text-4xl italic text-sea-deep sm:text-5xl">
             Galveston, Texas
           </h1>
-          <p className="mt-2 text-lg font-medium text-sea">May 8–16, 2027</p>
+          <p className="mt-2 text-lg font-medium text-sea">May 8–17, 2027</p>
           <p className="mx-auto mt-6 max-w-lg text-base leading-7 text-ink/80">
             Our next residency takes us to the Texas Gulf Coast. We&apos;re
             still finalizing partners and the application itself, but if

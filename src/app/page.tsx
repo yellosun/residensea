@@ -100,7 +100,7 @@ export default function Home() {
               href="/apply"
               className="rounded-full bg-terracotta px-6 py-3 text-sm font-semibold text-sand-light hover:bg-terracotta-dark"
             >
-              Upcoming: Galveston, TX, May 8–16, 2027
+              Upcoming: Galveston, TX, May 8–17, 2027
             </Link>
             <Link
               href="/#story"
@@ -274,7 +274,7 @@ export default function Home() {
 
       <section className="bg-sea-deep px-6 py-20 text-center text-sand-light">
         <h2 className="font-serif text-3xl italic">
-          Galveston, Texas, May 8–16, 2027
+          Galveston, Texas, May 8–17, 2027
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-sand-light/80">
           Galveston&apos;s coastal charm, distinctive history, and vibrant
